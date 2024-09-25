@@ -1,0 +1,9 @@
+a.out
+libft.h.gch
+.vscode
+*.o
+*.pdf
+libft.a
+listatest.txt
+test_libft_bonus.c
+test_libft.c
