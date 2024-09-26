@@ -80,13 +80,13 @@ static char	**push_words_in_array(char **array, char const *s, char c, int i)
 			start = s;
 			len = get_word_length(s, c);
 			array[i] = allocate_word(start, len);
-			if (!array[i])
+/* 			if (!array[i])
 			{
 				while (i > 0)
 					free((array[i--]));
 				free(array);
 				return (NULL);
-			}
+			} */
 			s += len;
 			i++;
 		}
