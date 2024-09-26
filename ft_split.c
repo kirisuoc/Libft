@@ -82,7 +82,7 @@ static char	**push_words_in_array(char **array, char const *s, char c, int i)
 			array[i] = allocate_word(start, len);
  			if (!array[i])
 			{
-				while (i > 0)
+				while (i >= 0)
 					free((array[i--]));
 				free(array);
 				array = NULL;
@@ -102,10 +102,9 @@ char	**ft_split(char const *s, char c)
 	int		words;
 	int		i;
 
-	if (!s)
-		return (strdup(""));
+	if (s == NULL)
+		return (NULL);
 	words = count_words(s, c);
-	printf("palabras: %i\n", words);
 	// if (words == 0)
 	// 	return (NULL);
 	array = malloc((words + 1) * sizeof(char *));
