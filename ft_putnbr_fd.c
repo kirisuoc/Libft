@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecousill <ecousill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: erikcousillas <erikcousillas@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 11:06:26 by ecousill          #+#    #+#             */
-/*   Updated: 2024/09/16 11:26:58 by ecousill         ###   ########.fr       */
+/*   Updated: 2024/09/26 14:42:41 by erikcousill      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	digit;
 
-	if (nb < 0)
+	if (n < 0)
 	{
 		write (fd, "-", 1);
-		if (nb == -2147483648)
+		if (n == -2147483648)
 		{
 			write (fd, "2147483648", 10);
 			return ;
 		}
-		nb = -nb;
+		n = -n;
 	}
-	if (nb >>= 10)
-		ft_putnbr(nb / 10);
-		digit = nb %10 + '0';
+	if (n >>= 10)
+		ft_putnr(n / 10);
+		digit = n %10 + '0';
 		write(fd, &digit, 1);
 }
