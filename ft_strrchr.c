@@ -15,9 +15,9 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*last_occurrence;
-	char *str;
+	char		*str;
 
-	str = s;
+	str = (char *)s;
 	last_occurrence = NULL;
 	while (*str != '\0')
 	{
