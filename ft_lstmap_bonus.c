@@ -21,6 +21,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (lst == NULL || f == NULL)
 		return (NULL);
 	new_list = NULL;
+	temp = NULL;
 	while (lst)
 	{
 		new_node = malloc(sizeof(t_list));
