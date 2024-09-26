@@ -15,15 +15,17 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*last_occurrence;
+	char *str;
 
+	str = s;
 	last_occurrence = NULL;
-	while (*s != '\0')
+	while (*str != '\0')
 	{
-		if (*s == (char)c)
+		if (*str == (char)c)
 			last_occurrence = s;
-		s++;
+		str++;
 	}
-	if (*s == (char)c)
-		last_occurrence = s;
+	if (*str == (char)c)
+		last_occurrence = str;
 	return ((char *)last_occurrence);
 }
