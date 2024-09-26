@@ -72,11 +72,11 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 	{
-		string = malloc(12);
-		if(!string)
-			return (NULL);
-		ft_strcpy(string, "-2147483648");
-		return (string);
+		// string = malloc(12);
+		// if(!string)
+		// 	return (NULL);
+		// string = "-2147483648";
+		return (ft_strdup("-2147483648"));
 	}
 	if (n == 0)
 	{
