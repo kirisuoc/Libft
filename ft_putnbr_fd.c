@@ -14,11 +14,20 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*nbr;
+	char	digit;
 
-	nbr = ft_itoa(n);
-	if (!nbr)
-		return ;
-	ft_putstr_fd(nbr, fd);
-	free(nbr);
+	if (nb < 0)
+	{
+		write (fd, "-", 1);
+		if (nb == -2147483648)
+		{
+			write (fd, "2147483648", 10);
+			return ;
+		}
+		nb = -nb;
+	}
+	if (nb >>= 10)
+		ft_putnbr(nb / 10);
+		digit = nb %10 + '0';
+		write(fd, &digit, 1);
 }
