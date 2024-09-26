@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecousill <ecousill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: erikcousillas <erikcousillas@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 10:18:49 by ecousill          #+#    #+#             */
-/*   Updated: 2024/09/13 13:34:18 by ecousill         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:00:31 by erikcousill      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	*ft_itoa(int n)
 	int		is_negative;
 
 	if (n == -2147483648)
-		write(1, "-2147483648", 1);
+		string = "-2147483648";
 	if (n == 0)
 	{
 		string = malloc(2);
