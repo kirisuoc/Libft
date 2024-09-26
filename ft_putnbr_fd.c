@@ -6,7 +6,7 @@
 /*   By: erikcousillas <erikcousillas@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 11:06:26 by ecousill          #+#    #+#             */
-/*   Updated: 2024/09/26 14:42:41 by erikcousill      ###   ########.fr       */
+/*   Updated: 2024/09/26 14:43:22 by erikcousill      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_putnbr_fd(int n, int fd)
 		n = -n;
 	}
 	if (n >>= 10)
-		ft_putnr(n / 10);
+		ft_putnbr(n / 10);
 		digit = n %10 + '0';
 		write(fd, &digit, 1);
 }
