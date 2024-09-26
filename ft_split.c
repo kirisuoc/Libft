@@ -41,9 +41,9 @@ static char	*allocate_word(char const *start, int len)
 	char	*word;
 
 	word = malloc((len + 1) * sizeof(char));
-	i = 0;
 	if (!word)
 		return (NULL);
+	i = 0;
 	while (i < len)
 	{
 		word[i] = start[i];
@@ -85,6 +85,7 @@ static char	**push_words_in_array(char **array, char const *s, char c, int i)
 			{
 				while (i > 0)
 					free((array[i--]));
+				free(array);
 				return (NULL);
 			}
 			i++;
