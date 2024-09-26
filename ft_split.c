@@ -80,7 +80,7 @@ static char	**push_words_in_array(char **array, char const *s, char c, int i)
 			start = s;
 			len = get_word_length(s, c);
 			array[i] = allocate_word(start, len);
-			if (!array[i++])
+			if (!array[i])
 			{
 				while (i >= 0)
 					free((array[i--]));
@@ -88,6 +88,7 @@ static char	**push_words_in_array(char **array, char const *s, char c, int i)
 				array = NULL;
 				return (NULL);
 			}
+			i++;
 			s += len;
 		}
 	}
@@ -108,6 +109,5 @@ char	**ft_split(char const *s, char c)
 	if (!array)
 		return (NULL);
 	i = 0;
-
 	return (push_words_in_array(array, s, c, i));
 }
