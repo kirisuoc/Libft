@@ -106,6 +106,9 @@ char	**ft_split(char const *s, char c)
 	if (!array)
 		return (NULL);
 	i = 0;
-	push_words_in_array(array, s, c, i);
+
+	if (!push_words_in_array(array, s, c, i));
+		free(array);
+		return (NULL);
 	return (array);
 }
