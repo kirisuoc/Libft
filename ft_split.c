@@ -70,6 +70,7 @@ static char	**push_words_in_array(char **array, char const *s, char c, int i)
 {
 	const char	*start;
 	int			len;
+	char		*word;
 
 	while (*s)
 	{
@@ -79,16 +80,16 @@ static char	**push_words_in_array(char **array, char const *s, char c, int i)
 		{
 			start = s;
 			len = get_word_length(s, c);
-			array[i] = allocate_word(start, len);
-			if (!array[i])
+			word = allocate_word(start, len);
+			if (!word)
 			{
 				while (i > 0)
 					free((array[i--]));
 				free(array);
 				return (NULL);
 			}
+			array[i++] = word;
 			s += len;
-			i++;
 		}
 	}
 	array[i] = NULL;
