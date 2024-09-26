@@ -102,6 +102,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	words = count_words(s, c);
+	if (words == 0)
+		return (NULL);
 	array = malloc((words + 1) * sizeof(char *));
 	if (!array)
 		return (NULL);
