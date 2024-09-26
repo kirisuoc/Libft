@@ -64,7 +64,6 @@ static char	*build_string(int n, char *s, int is_negative, int num_digits)
 	return (s);
 }
 
-// Tener en cuenta el int mínimo !!
 char	*ft_itoa(int n)
 {
 	char	*string;
@@ -72,7 +71,10 @@ char	*ft_itoa(int n)
 	int		is_negative;
 
 	if (n == -2147483648)
+	{
 		string = "-2147483648";
+		return (string);
+	}
 	if (n == 0)
 	{
 		string = malloc(2);
