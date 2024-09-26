@@ -41,7 +41,7 @@ static char	*allocate_word(char const *start, int len)
 	char	*word;
 
 	word = malloc((len + 1) * sizeof(char));
-	if (!word)
+	if (!word || len == 1)
 		return (NULL);
 	i = 0;
 	while (i < len)
