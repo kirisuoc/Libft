@@ -40,6 +40,7 @@ static char	*allocate_word(char const *start, int len)
 	int		i;
 	char	*word;
 
+	word = malloc((len + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	i = 0;
@@ -79,13 +80,13 @@ static char	**push_words_in_array(char **array, char const *s, char c, int i)
 			start = s;
 			len = get_word_length(s, c);
 			array[i] = allocate_word(start, len);
-			if (!array[i])
+/* 			if (!array[i])
 			{
 				while (i > 0)
 					free((array[i--]));
 				free(array);
 				return (NULL);
-			}
+			} */
 			s += len;
 			i++;
 		}
@@ -105,10 +106,7 @@ char	**ft_split(char const *s, char c)
 	if (!array)
 		return (NULL);
 	i = 0;
-	if (!push_words_in_array(array, s, c, i))
-	{
-		free(array);
-		return (NULL);
-	}
+	push_words_in_array(array, s, c, i);
+
 	return (array);
 }
