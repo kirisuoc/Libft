@@ -85,7 +85,6 @@ static char	**push_words_in_array(char **array, char const *s, char c, int i)
 			{
 				while (i > 0)
 					free((array[i--]));
-				free (array);
 				return (NULL);
 			}
 			i++;
