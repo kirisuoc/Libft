@@ -71,6 +71,8 @@ char	*ft_itoa(int n)
 	int		num_digits;
 	int		is_negative;
 
+	if (n == -2147483648)
+		write(1, "-2147483648", 1);
 	if (n == 0)
 	{
 		string = malloc(2);
