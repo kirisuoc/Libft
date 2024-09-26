@@ -75,7 +75,7 @@ char	*ft_itoa(int n)
 		string = malloc(12);
 		if(!string)
 			return (NULL);
-		ft_strcpy(string, "-2147483648")
+		ft_strcpy(string, "-2147483648");
 		return (string);
 	}
 	if (n == 0)
