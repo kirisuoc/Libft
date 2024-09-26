@@ -102,11 +102,12 @@ char	**ft_split(char const *s, char c)
 	int		words;
 	int		i;
 
-	if (s == NULL)
-		return (NULL);
+	if (!s)
+		return (strdup(""));
 	words = count_words(s, c);
-	if (words == 0)
-		return (NULL);
+	printf("palabras: %i\n", words);
+	// if (words == 0)
+	// 	return (NULL);
 	array = malloc((words + 1) * sizeof(char *));
 	if (!array)
 		return (NULL);
