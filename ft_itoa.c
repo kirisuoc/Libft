@@ -74,7 +74,7 @@ char	*ft_itoa(int n)
 	{
 		string = malloc(12);
 		if(!string)
-			return (NULL)
+			return (NULL);
 		string = "-2147483648";
 		return (string);
 	}
