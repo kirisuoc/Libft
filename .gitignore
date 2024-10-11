@@ -7,4 +7,5 @@ libft.a
 listatest.txt
 test_libft_bonus.c
 test_libft.c
-test.c
+test1.c
+.DS_Store
