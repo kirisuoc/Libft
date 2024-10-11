@@ -6,13 +6,12 @@
 /*   By: ecousill <ecousill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 20:10:11 by erikcousill       #+#    #+#             */
-/*   Updated: 2024/09/17 12:46:04 by ecousill         ###   ########.fr       */
+/*   Updated: 2024/10/09 12:41:30 by ecousill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Verificar size == 0?
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	length;
